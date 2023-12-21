@@ -1,17 +1,47 @@
-/* le block conteneur */
-.marquee-rtl {
-  max-width: 30em; /* largeur de la fenêtre */
-  margin: 1em auto 2em;
-  border: 10px solid #f0f0ff;
-  overflow: hidden; /* masque tout ce qui dépasse */
-  box-shadow: 0 0.25em 0.5em #ccc, inset 0 0 1em 0.25em #ccc;
-}
-
-/* le bloc défilant */
-.marquee-rtl > :first-child {
-  display: inline-block; /* modèle de boîte en ligne */
-  padding-right: 2em; /* un peu d'espace pour la transition */
-  padding-left: 100%; /* placement à droite du conteneur */
-  white-space: nowrap; /* pas de passage à la ligne */
-  animation: defilement-rtl 15s infinite linear;
-}
+/* Texte défilant */
+.messagedefilant {
+    display: block;
+    margin: 40px auto;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+    max-width: 640px;
+    height: 60px;
+  }
+   
+  .messagedefilant div {
+    position: absolute;
+    min-width: 100%; /* au minimum la largeur du conteneur */
+  }
+   
+  .messagedefilant div span, 
+  .messagedefilant div:after {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    white-space: nowrap;
+    top:0;
+  }
+   
+  .messagedefilant div span {
+    animation: defilement 10s infinite linear;
+    background: #cde;
+  }
+   
+  .messagedefilant div:after {
+    position: absolute;
+    top:0; left:0;
+    content:attr(data-text);
+    animation: defilement2 10s infinite linear;
+    background: #edc;
+  }
+   
+  @keyframes defilement {
+    0% { margin-left: 0; }
+    100% { margin-left: -100%; }
+  }
+   
+  @keyframes defilement2 {
+    0% { margin-left: 100%; }
+    100% { margin-left: 0%; }
