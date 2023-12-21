@@ -1,6 +1,0 @@
-adresse :		tanguy.bayart@scholarfab.school
-mot de passe : 	GitCTF202312
-
-nom du compte github : 	theunknowsESD
-
-adresse du repo :		https://github.com/theunknowsESD/findTheFlag
