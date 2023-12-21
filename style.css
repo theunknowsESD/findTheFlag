@@ -1,9 +1,22 @@
+.body {
+  font-style: white;
+}
+
+a {
+  color: #ffffff;
+  font-style: bold;
+}
+
 .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgb(244, 239, 239);
-  color: white;
+  background-color: #282a4d;
+  font-style: white;
   text-align: center;
+}
+
+.footer.a {
+  font-style: white;
 }
