@@ -1,0 +1,17 @@
+/* le block conteneur */
+.marquee-rtl {
+  max-width: 30em; /* largeur de la fenêtre */
+  margin: 1em auto 2em;
+  border: 10px solid #f0f0ff;
+  overflow: hidden; /* masque tout ce qui dépasse */
+  box-shadow: 0 0.25em 0.5em #ccc, inset 0 0 1em 0.25em #ccc;
+}
+
+/* le bloc défilant */
+.marquee-rtl > :first-child {
+  display: inline-block; /* modèle de boîte en ligne */
+  padding-right: 2em; /* un peu d'espace pour la transition */
+  padding-left: 100%; /* placement à droite du conteneur */
+  white-space: nowrap; /* pas de passage à la ligne */
+  animation: defilement-rtl 15s infinite linear;
+}
