@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Admin access</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-  </head>
-  <body bgcolor="#1f204e" style="color: #ffffff">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Admin access</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="./web/connexion.js"></script>
+</head>
+
+<body bgcolor="#1f204e" style="color: #ffffff">
+  
+  <div style="height: 96px; background:#1f204e;">
     <h2>Admin console access</h2>
-    <center>To do ....</center>
-  </body>
+  </div>
+  <hr />
+  <center>please log in</center>
+  <center>
+    <form name="connexion" action="./popup.html" method="get">
+      <div class="row">
+        <div class="col"><input type="text" name="l" value="" placeholder="login"></div>
+        <div class="col"><input type="password" name="p" value="" placeholder="password"></div>
+        <div class="col" style="padding: .5rem; border-radius: .2rem;"><button type="submit">connexion</button></div>
+      </div>
+
+    </form>
+  </center>
+  <center>
+    <div id="access" style="paddingg: .5rem; font-size: large;display: none;color: red;">ACCES INTERDIT!</div>
+  </center>
+  <footer class="footer" bgcolor="midnightblue">
+    <a href="./index.html" style="font: white;" >Retour</a>
+  </footer>
+</body>
+
 </html>

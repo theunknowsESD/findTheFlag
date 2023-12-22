@@ -1,10 +1,20 @@
-.body {
-  font-style: white;
+body {
+  color: white;
+  font-family: monospace;
 }
 
 a {
   color: #ffffff;
   font-style: bold;
+}
+
+table {
+  border: 2px solid white;
+  border-spacing: 0;
+}
+
+td {
+  padding:.3rem;
 }
 
 .footer {
@@ -15,6 +25,7 @@ a {
   background-color: #282a4d;
   font-style: white;
   text-align: center;
+  padding: .3rem;
 }
 
 .footer.a {
